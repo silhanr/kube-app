@@ -1,0 +1,26 @@
+#Volume
+aws ec2 create-volume --availability-zone us-east-1a --size=3 --volume-type=gp2
+
+{
+    "AvailabilityZone": "us-east-1a",
+    "CreateTime": "2024-07-28T19:10:54+00:00",
+    "Encrypted": false,
+    "Size": 3,
+    "SnapshotId": "",
+    "State": "creating",
+    "VolumeId": "vol-017c9edc856677db8",
+    "Iops": 100,
+    "Tags": [],
+    "VolumeType": "gp2",
+    "MultiAttachEnabled": false
+}
+
+#show labels
+kubectl get nodes --show-labels
+
+#label nodes
+k label node i-06a2afcfb22d34210 zone=us-east-1b
+
+k label node i-06cbf4d84d0f52da4 zone=us-east-1a
+
+
